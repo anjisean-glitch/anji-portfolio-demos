@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Naija Kitchen – Authentic Nigerian Cuisine, Port Harcourt</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0b1a0e;
+  --bg2:#0f2213;
+  --bg3:#152c19;
+  --green:#1d6b35;
+  --green-light:#2d9e52;
+  --orange:#e85d20;
+  --orange-light:#ff7d42;
+  --cream:#f5ede0;
+  --cream2:#e8d9c4;
+  --text:#f0e8d8;
+  --muted:#7a9e82;
+  --border:rgba(45,158,82,0.2);
+  --font-head:'Playfair Display',serif;
+  --font-body:'Outfit',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(11,26,14,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--font-head);font-size:1.4rem;font-weight:700;color:var(--cream);text-decoration:none}
+.nav-logo span{color:var(--orange)}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--orange-light)}
+.nav-order{background:var(--orange);color:#fff;padding:0.6rem 1.5rem;border-radius:4px;text-decoration:none;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;transition:background 0.2s}
+.nav-order:hover{background:var(--orange-light)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:10rem 4rem 6rem;position:relative;overflow:hidden}
+.hero-pattern{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,var(--green-light) 0,var(--green-light) 1px,transparent 0,transparent 50%);background-size:20px 20px}
+.hero-glow{position:absolute;top:20%;left:60%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(232,93,32,0.12) 0%,transparent 70%);pointer-events:none}
+.hero-tag{display:inline-flex;align-items:center;gap:0.75rem;background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:0.5rem 1rem;font-size:0.75rem;font-weight:500;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2rem;width:fit-content}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--green-light);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero h1{font-family:var(--font-head);font-size:clamp(3.5rem,8vw,7rem);font-weight:900;line-height:0.95;letter-spacing:-0.02em;color:var(--cream);margin-bottom:1.5rem;max-width:800px}
+.hero h1 .accent{color:var(--orange);font-style:italic;display:block}
+.hero-desc{color:var(--muted);font-size:1.05rem;font-weight:300;max-width:480px;line-height:1.8;margin-bottom:3rem}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn-orange{background:var(--orange);color:#fff;padding:1rem 2.5rem;border-radius:4px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:background 0.2s,transform 0.2s;display:inline-block}
+.btn-orange:hover{background:var(--orange-light);transform:translateY(-1px)}
+.btn-outline{border:1px solid var(--border);color:var(--muted);padding:1rem 2.5rem;border-radius:4px;text-decoration:none;font-weight:500;font-size:0.9rem;transition:border-color 0.2s,color 0.2s;display:inline-block}
+.btn-outline:hover{border-color:var(--green-light);color:var(--text)}
+.hero-stats{display:flex;gap:3rem;margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border)}
+.hero-stat-num{font-family:var(--font-head);font-size:2.5rem;font-weight:700;color:var(--orange);line-height:1;display:block}
+.hero-stat-label{font-size:0.8rem;color:var(--muted);margin-top:0.25rem;letter-spacing:0.05em}
+
+/* MARQUEE */
+.marquee-wrap{overflow:hidden;padding:0.9rem 0;background:var(--orange);border:none}
+.marquee-track{display:flex;animation:marquee 18s linear infinite;white-space:nowrap}
+.marquee-item{padding:0 2rem;font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.85);display:flex;align-items:center;gap:2rem}
+.marquee-item::after{content:'🌶️';font-size:0.7rem}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ABOUT */
+.about{padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-visual{position:relative}
+.about-img{width:100%;height:420px;background:var(--bg3);border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;border:1px solid var(--border)}
+.about-img-text{font-family:var(--font-head);font-size:4rem;color:var(--orange);opacity:0.3;font-style:italic}
+.about-img-sub{font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
+.about-float{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--orange);border-radius:8px;padding:1.5rem;text-align:center}
+.about-float-num{font-family:var(--font-head);font-size:2rem;font-weight:700;color:#fff;line-height:1}
+.about-float-text{font-size:0.7rem;color:rgba(255,255,255,0.7);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px}
+.about-content h2{font-family:var(--font-head);font-size:clamp(2.2rem,4vw,3rem);font-weight:700;line-height:1.1;color:var(--cream);margin-bottom:1.5rem;letter-spacing:-0.02em}
+.about-content h2 em{color:var(--orange);font-style:italic}
+.about-content p{color:var(--muted);font-weight:300;font-size:1rem;line-height:1.8;margin-bottom:1rem}
+.about-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem}
+.about-tag{background:var(--bg3);border:1px solid var(--border);border-radius:100px;padding:0.35rem 1rem;font-size:0.75rem;color:var(--muted);letter-spacing:0.05em}
+
+/* MENU */
+.menu{padding:7rem 4rem;background:var(--bg2)}
+.section-header{margin-bottom:4rem}
+.section-eyebrow{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);margin-bottom:1rem;display:flex;align-items:center;gap:0.75rem}
+.section-eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--orange)}
+.section-title{font-family:var(--font-head);font-size:clamp(2.2rem,4vw,3.5rem);font-weight:700;color:var(--cream);letter-spacing:-0.02em}
+.section-title em{color:var(--orange);font-style:italic}
+.menu-tabs{display:flex;gap:0;margin-bottom:3rem;border-bottom:1px solid var(--border)}
+.menu-tab{padding:0.75rem 1.5rem;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color 0.2s,border-color 0.2s}
+.menu-tab.active{color:var(--orange);border-color:var(--orange)}
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border)}
+.menu-item{background:var(--bg2);padding:1.75rem;display:flex;gap:1.25rem;align-items:flex-start;transition:background 0.2s}
+.menu-item:hover{background:var(--bg3)}
+.menu-item-emoji{font-size:2rem;flex-shrink:0;margin-top:2px}
+.menu-item-info{flex:1}
+.menu-item-info h4{font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--cream);margin-bottom:0.3rem}
+.menu-item-info p{color:var(--muted);font-size:0.85rem;font-weight:300;line-height:1.6}
+.menu-item-price{font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--orange);flex-shrink:0;margin-top:2px}
+
+/* EXPERIENCE */
+.experience{padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:var(--border)}
+.exp-card{background:var(--bg);padding:3rem 2rem;text-align:center;transition:background 0.3s}
+.exp-card:hover{background:var(--bg3)}
+.exp-icon{font-size:2.5rem;margin-bottom:1.25rem;display:block}
+.exp-card h3{font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:0.75rem}
+.exp-card p{color:var(--muted);font-size:0.875rem;font-weight:300;line-height:1.7}
+
+/* TESTIMONIALS */
+.testimonials{padding:7rem 4rem;background:var(--bg2)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
+.testi-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:2rem}
+.testi-stars{color:var(--orange);font-size:0.9rem;margin-bottom:1rem;letter-spacing:2px}
+.testi-card p{color:var(--muted);font-size:0.9rem;font-weight:300;line-height:1.7;font-style:italic;margin-bottom:1.25rem}
+.testi-author{display:flex;align-items:center;gap:0.75rem}
+.testi-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:#fff;flex-shrink:0}
+.testi-name{font-size:0.85rem;font-weight:600;color:var(--cream)}
+.testi-location{font-size:0.75rem;color:var(--muted)}
+
+/* CTA */
+.cta{padding:8rem 4rem;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(232,93,32,0.08) 0%,transparent 70%);pointer-events:none}
+.cta h2{font-family:var(--font-head);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;color:var(--cream);margin-bottom:1rem;letter-spacing:-0.03em}
+.cta h2 em{color:var(--orange);font-style:italic}
+.cta p{color:var(--muted);font-size:1.05rem;margin-bottom:2.5rem;max-width:420px;margin-left:auto;margin-right:auto}
+.cta-details{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
+.cta-detail{display:flex;align-items:center;gap:0.5rem;color:var(--muted);font-size:0.875rem}
+
+/* FOOTER */
+footer{background:var(--bg2);padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--cream)}
+.footer-logo span{color:var(--orange)}
+footer p{color:var(--muted);font-size:0.8rem}
+
+/* FADE */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .hero,.about,.cta{padding:5rem 1.5rem 3rem}
+  .about{grid-template-columns:1fr;gap:3rem}
+  .menu,.testimonials,.experience{padding:4rem 1.5rem}
+  .menu-grid,.testimonials-grid{grid-template-columns:1fr}
+  .experience{grid-template-columns:1fr}
+  .hero-stats{gap:1.5rem;flex-wrap:wrap}
+  footer{padding:2rem 1.5rem;flex-direction:column;text-align:center}
+  .about-float{right:0;bottom:-1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#"><span>The</span> Naija Kitchen</a>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#order">Order Now</a></li>
+  </ul>
+  <a href="#order" class="nav-order">Order Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-tag">
+    <span class="hero-tag-dot"></span>
+    Now Open · Port Harcourt
+  </div>
+  <h1>Authentic<br><span class="accent">Nigerian Flavour.</span></h1>
+  <p class="hero-desc">From smoky Banga soup to crispy fried plantain — every dish is made fresh with love, spice and the true taste of home.</p>
+  <div class="hero-ctas">
+    <a href="#order" class="btn-orange">🍽️ Order Now</a>
+    <a href="#menu" class="btn-outline">View Full Menu</a>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <span class="hero-stat-num">12+</span>
+      <div class="hero-stat-label">Years serving PH</div>
+    </div>
+    <div>
+      <span class="hero-stat-num">50+</span>
+      <div class="hero-stat-label">Menu items</div>
+    </div>
+    <div>
+      <span class="hero-stat-num">4.9★</span>
+      <div class="hero-stat-label">Customer rating</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Banga Soup</span>
+    <span class="marquee-item">Jollof Rice</span>
+    <span class="marquee-item">Pounded Yam</span>
+    <span class="marquee-item">Egusi Soup</span>
+    <span class="marquee-item">Pepper Soup</span>
+    <span class="marquee-item">Fried Fish</span>
+    <span class="marquee-item">Suya</span>
+    <span class="marquee-item">Plantain</span>
+    <span class="marquee-item">Banga Soup</span>
+    <span class="marquee-item">Jollof Rice</span>
+    <span class="marquee-item">Pounded Yam</span>
+    <span class="marquee-item">Egusi Soup</span>
+    <span class="marquee-item">Pepper Soup</span>
+    <span class="marquee-item">Fried Fish</span>
+    <span class="marquee-item">Suya</span>
+    <span class="marquee-item">Plantain</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="about-visual fade-up">
+    <div class="about-img">
+      <div class="about-img-text">Naija</div>
+      <div class="about-img-sub">Est. 2013 · Port Harcourt</div>
+    </div>
+    <div class="about-float">
+      <div class="about-float-num">100%</div>
+      <div class="about-float-text">Fresh Daily</div>
+    </div>
+  </div>
+  <div class="about-content fade-up">
+    <h2>Cooking with <em>Soul</em> since 2013</h2>
+    <p>The Naija Kitchen was born from a simple belief: that Nigerian food deserves to be celebrated. We started as a small chop-bar in Rumuola and grew into Port Harcourt's most beloved authentic restaurant.</p>
+    <p>Every recipe is passed down from our grandmother's kitchen. No shortcuts. No compromises. Just real, honest food made the way it's always been done.</p>
+    <div class="about-tags">
+      <span class="about-tag">Dine In</span>
+      <span class="about-tag">Take Away</span>
+      <span class="about-tag">Catering</span>
+      <span class="about-tag">Event Orders</span>
+      <span class="about-tag">Delivery</span>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="menu">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">What's Cooking</div>
+    <h2 class="section-title">Our <em>Menu</em></h2>
+  </div>
+  <div class="menu-tabs fade-up">
+    <div class="menu-tab active">Soups & Swallows</div>
+    <div class="menu-tab">Rice & Sides</div>
+    <div class="menu-tab">Proteins</div>
+    <div class="menu-tab">Drinks</div>
+  </div>
+  <div class="menu-grid fade-up">
+    <div class="menu-item">
+      <span class="menu-item-emoji">🍲</span>
+      <div class="menu-item-info">
+        <h4>Banga Soup & Starch</h4>
+        <p>Rich palm nut soup with assorted meat, slow-cooked to perfection. Served with starch.</p>
+      </div>
+      <div class="menu-item-price">₦3,500</div>
+    </div>
+    <div class="menu-item">
+      <span class="menu-item-emoji">🥘</span>
+      <div class="menu-item-info">
+        <h4>Egusi Soup & Pounded Yam</h4>
+        <p>Ground melon seed soup with ugu leaves, stockfish and assorted protein.</p>
+      </div>
+      <div class="menu-item-price">₦3,200</div>
+    </div>
+    <div class="menu-item">
+      <span class="menu-item-emoji">🍜</span>
+      <div class="menu-item-info">
+        <h4>Ofe Onugbu (Bitter Leaf)</h4>
+        <p>Classic Igbo bitter leaf soup with cocoyam thickener and smoked fish.</p>
+      </div>
+      <div class="menu-item-price">₦3,000</div>
+    </div>
+    <div class="menu-item">
+      <span class="menu-item-emoji">🌶️</span>
+      <div class="menu-item-info">
+        <h4>Catfish Pepper Soup</h4>
+        <p>Hot and spicy pepper soup with fresh catfish, utazi leaves and local spices.</p>
+      </div>
+      <div class="menu-item-price">₦4,500</div>
+    </div>
+    <div class="menu-item">
+      <span class="menu-item-emoji">🍛</span>
+      <div class="menu-item-info">
+        <h4>Oha Soup & Eba</h4>
+        <p>Tender oha leaves in a rich palm nut base with cow leg and assorted meat.</p>
+      </div>
+      <div class="menu-item-price">₦3,000</div>
+    </div>
+    <div class="menu-item">
+      <span class="menu-item-emoji">🥩</span>
+      <div class="menu-item-info">
+        <h4>Afang Soup & Fufu</h4>
+        <p>Afang leaves with waterleaf, periwinkle, crayfish and palm oil. A PH classic.</p>
+      </div>
+      <div class="menu-item-price">₦3,500</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience">
+  <div class="exp-card fade-up">
+    <span class="exp-icon">🏠</span>
+    <h3>Dine In</h3>
+    <p>Enjoy your meal in our warm, welcoming restaurant. Family tables, private booths and A/C available.</p>
+  </div>
+  <div class="exp-card fade-up">
+    <span class="exp-icon">📦</span>
+    <h3>Take Away</h3>
+    <p>Order online via WhatsApp and pick up fresh hot food in 20–30 minutes. No waiting, no stress.</p>
+  </div>
+  <div class="exp-card fade-up">
+    <span class="exp-icon">🎉</span>
+    <h3>Catering</h3>
+    <p>We cater for weddings, birthdays, corporate events and parties across Port Harcourt. Call us.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="testimonials">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">Reviews</div>
+    <h2 class="section-title">What Our <em>Customers Say</em></h2>
+  </div>
+  <div class="testimonials-grid fade-up">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p>"The Banga soup here tastes exactly like my mother's. I've been coming every week for 3 years. Nothing beats it in all of PH!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:var(--green)">C</div>
+        <div><div class="testi-name">Chukwuemeka Eze</div><div class="testi-location">Port Harcourt</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p>"We hired them for our wedding reception — 200 guests and everyone was satisfied. Professional, punctual and the food was outstanding."</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:var(--orange)">A</div>
+        <div><div class="testi-name">Adaora & Tunde</div><div class="testi-location">Port Harcourt</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p>"Best catfish pepper soup in Rivers State. The spice level is perfect and the portion size is incredibly generous. Highly recommend!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:#8a4f2a">O</div>
+        <div><div class="testi-name">Obiageli Nwosu</div><div class="testi-location">Trans-Amadi</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="order" class="cta">
+  <h2 class="fade-up">Hungry? <em>Let's Feed You.</em></h2>
+  <p class="fade-up">Order via WhatsApp for fast pickup or dine in with us today. Freshly made, every time.</p>
+  <a href="https://wa.me/2348000000000?text=Hi%2C%20I%20want%20to%20place%20an%20order%20from%20The%20Naija%20Kitchen" class="btn-orange fade-up" style="font-size:1rem;padding:1.1rem 3rem">💬 Order on WhatsApp</a>
+  <div class="cta-details fade-up">
+    <div class="cta-detail">📍 12 Stadium Road, Port Harcourt</div>
+    <div class="cta-detail">📞 0800 000 0000</div>
+    <div class="cta-detail">🕐 Mon–Sun, 10am – 10pm</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><span>The</span> Naija Kitchen</div>
+  <p>© 2025 The Naija Kitchen, Port Harcourt. All rights reserved.</p>
+  <p style="color:rgba(240,232,216,0.2);font-size:0.75rem">Website by Anji Bob-Manuel</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.12});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+document.querySelectorAll('.menu-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

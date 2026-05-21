@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>LifeCare Medical Centre – Port Harcourt</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f8fafc;
+  --bg2:#eef2f7;
+  --bg3:#e2eaf4;
+  --navy:#0a2342;
+  --navy2:#163560;
+  --blue:#1e5fac;
+  --blue-light:#3b82d4;
+  --teal:#0d9e7e;
+  --text:#0a2342;
+  --muted:#5a7a9a;
+  --border:rgba(10,35,66,0.1);
+  --white:#ffffff;
+  --font-head:'Fraunces',serif;
+  --font-body:'Plus Jakarta Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);box-shadow:0 1px 20px rgba(10,35,66,0.06)}
+.nav-logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+.nav-logo-icon{width:38px;height:38px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;font-weight:700;font-family:var(--font-body)}
+.nav-logo-text{font-family:var(--font-head);font-size:1.2rem;font-weight:400;color:var(--navy);font-style:italic}
+.nav-logo-text span{font-style:normal;font-weight:600}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--blue)}
+.nav-appt{background:var(--blue);color:#fff;padding:0.6rem 1.5rem;border-radius:6px;text-decoration:none;font-size:0.82rem;font-weight:600;transition:background 0.2s}
+.nav-appt:hover{background:var(--blue-light)}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:72px}
+.hero-left{padding:6rem 4rem;display:flex;flex-direction:column;justify-content:center;background:var(--white)}
+.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(13,158,126,0.08);border:1px solid rgba(13,158,126,0.25);border-radius:100px;padding:0.4rem 1rem;font-size:0.75rem;font-weight:600;color:var(--teal);letter-spacing:0.05em;margin-bottom:2rem;width:fit-content}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
+.hero h1{font-family:var(--font-head);font-size:clamp(2.8rem,5vw,4.2rem);font-weight:300;line-height:1.1;color:var(--navy);margin-bottom:1.5rem;letter-spacing:-0.02em}
+.hero h1 strong{font-weight:400;font-style:italic;color:var(--blue)}
+.hero-desc{color:var(--muted);font-size:1rem;font-weight:400;max-width:420px;line-height:1.8;margin-bottom:2.5rem}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.btn-blue{background:var(--blue);color:#fff;padding:0.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:background 0.2s,transform 0.2s;display:inline-block}
+.btn-blue:hover{background:var(--blue-light);transform:translateY(-1px)}
+.btn-outline-blue{border:1.5px solid var(--border);color:var(--muted);padding:0.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;transition:border-color 0.2s,color 0.2s;display:inline-block}
+.btn-outline-blue:hover{border-color:var(--blue);color:var(--blue)}
+.hero-trust{display:flex;gap:2rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--muted);font-weight:500}
+.trust-icon{width:28px;height:28px;background:var(--bg2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem}
+.hero-right{background:var(--bg2);display:flex;flex-direction:column;justify-content:center;padding:4rem;gap:1.5rem;position:relative;overflow:hidden}
+.hero-right::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:rgba(30,95,172,0.06);pointer-events:none}
+.stat-card{background:var(--white);border-radius:12px;padding:1.5rem;border:1px solid var(--border);box-shadow:0 2px 12px rgba(10,35,66,0.04)}
+.stat-card-top{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem}
+.stat-card-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.stat-card-label{font-size:0.78rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em}
+.stat-card-num{font-family:var(--font-head);font-size:2.2rem;font-weight:400;color:var(--navy);line-height:1;font-style:italic}
+.stat-card-sub{font-size:0.78rem;color:var(--muted);margin-top:0.25rem}
+.hero-right-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+/* SERVICES */
+.services{padding:7rem 4rem;background:var(--white)}
+.section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.75rem}
+.section-label::before{content:'';display:block;width:24px;height:2px;background:var(--blue);border-radius:2px}
+.section-title{font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--navy);margin-bottom:1rem;font-style:italic;letter-spacing:-0.02em}
+.section-title span{font-style:normal;font-weight:400}
+.section-desc{color:var(--muted);max-width:520px;font-size:0.95rem;line-height:1.8;margin-bottom:4rem}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:2rem;transition:box-shadow 0.3s,transform 0.3s,border-color 0.3s}
+.service-card:hover{box-shadow:0 8px 32px rgba(10,35,66,0.1);transform:translateY(-3px);border-color:rgba(30,95,172,0.2)}
+.service-icon{width:52px;height:52px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.25rem}
+.service-card h3{font-family:var(--font-head);font-size:1.2rem;font-weight:400;color:var(--navy);margin-bottom:0.5rem;font-style:italic}
+.service-card p{color:var(--muted);font-size:0.875rem;line-height:1.7;font-weight:400;margin-bottom:1rem}
+.service-link{font-size:0.8rem;font-weight:600;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:0.4rem}
+.service-link::after{content:'→';transition:transform 0.2s}
+.service-card:hover .service-link::after{transform:translateX(4px)}
+
+/* DOCTORS */
+.doctors{padding:7rem 4rem;background:var(--bg2)}
+.doctors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:4rem}
+.doctor-card{background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--border);transition:box-shadow 0.3s}
+.doctor-card:hover{box-shadow:0 8px 32px rgba(10,35,66,0.1)}
+.doctor-photo{height:200px;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:4rem;font-style:italic;color:var(--white)}
+.doctor-info{padding:1.5rem}
+.doctor-name{font-family:var(--font-head);font-size:1.2rem;font-weight:400;color:var(--navy);margin-bottom:0.25rem;font-style:italic}
+.doctor-role{font-size:0.78rem;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem}
+.doctor-info p{color:var(--muted);font-size:0.83rem;line-height:1.6}
+
+/* WHY */
+.why{padding:7rem 4rem;background:var(--navy);display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.why-content .section-label{color:var(--teal)}
+.why-content .section-label::before{background:var(--teal)}
+.why-content .section-title{color:#fff}
+.why-content .section-desc{color:rgba(255,255,255,0.5)}
+.why-list{display:flex;flex-direction:column;gap:1.25rem;margin-top:2rem}
+.why-item{display:flex;gap:1rem;align-items:flex-start}
+.why-check{width:28px;height:28px;background:rgba(13,158,126,0.15);border:1px solid rgba(13,158,126,0.3);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:0.9rem;flex-shrink:0;margin-top:2px}
+.why-item h4{font-size:0.95rem;font-weight:600;color:#fff;margin-bottom:0.2rem}
+.why-item p{font-size:0.85rem;color:rgba(255,255,255,0.45);font-weight:300;line-height:1.6}
+.why-visual{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:2.5rem;display:flex;flex-direction:column;gap:1.25rem}
+.why-stat{display:flex;align-items:center;gap:1.25rem;padding:1.25rem;background:rgba(255,255,255,0.04);border-radius:10px;border:1px solid rgba(255,255,255,0.06)}
+.why-stat-icon{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.why-stat-num{font-family:var(--font-head);font-size:1.8rem;font-weight:400;color:#fff;line-height:1;font-style:italic}
+.why-stat-label{font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:2px}
+
+/* TESTIMONIAL */
+.testimonial{padding:6rem 4rem;background:var(--bg);text-align:center}
+.testi-quote{font-family:var(--font-head);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:300;font-style:italic;color:var(--navy);max-width:680px;margin:2rem auto 1.5rem;line-height:1.6}
+.testi-cite{font-size:0.8rem;font-weight:600;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase}
+.testi-stars{color:var(--blue);font-size:1rem;margin-bottom:0.5rem;letter-spacing:2px}
+
+/* BOOKING */
+.booking{padding:7rem 4rem;background:var(--white)}
+.booking-inner{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);border-radius:20px;padding:5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.booking h2{font-family:var(--font-head);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;font-style:italic;color:#fff;margin-bottom:1rem}
+.booking p{color:rgba(255,255,255,0.5);font-size:0.95rem;line-height:1.8;margin-bottom:2rem}
+.booking-details{display:flex;flex-direction:column;gap:1rem}
+.booking-detail{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px}
+.booking-detail-icon{font-size:1.1rem;width:32px;text-align:center;flex-shrink:0}
+.booking-detail-text h4{font-size:0.82rem;font-weight:600;color:#fff;margin-bottom:1px}
+.booking-detail-text p{font-size:0.78rem;color:rgba(255,255,255,0.4)}
+.btn-white{background:#fff;color:var(--navy);padding:1rem 2.5rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem;display:inline-block;transition:opacity 0.2s}
+.btn-white:hover{opacity:0.9}
+
+/* FOOTER */
+footer{background:var(--navy);padding:2.5rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-logo{font-family:var(--font-head);font-size:1.2rem;color:rgba(255,255,255,0.6);font-style:italic}
+footer p{color:rgba(255,255,255,0.25);font-size:0.78rem}
+
+/* FADE */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr}
+  .hero-left{padding:5rem 1.5rem 3rem}
+  .hero-right{padding:2rem 1.5rem}
+  .services,.doctors,.why,.testimonial,.booking{padding:4rem 1.5rem}
+  .services-grid,.doctors-grid{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr;gap:3rem}
+  .booking-inner{grid-template-columns:1fr;padding:2.5rem 1.5rem;gap:2.5rem}
+  footer{padding:2rem 1.5rem;flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-icon">+</div>
+    <div class="nav-logo-text"><span>LifeCare</span> Medical</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#doctors">Our Doctors</a></li>
+    <li><a href="#about">Why Us</a></li>
+    <li><a href="#booking">Book Appointment</a></li>
+  </ul>
+  <a href="#booking" class="nav-appt">Book Appointment</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Accepting New Patients
+    </div>
+    <h1>Your Health.<br>Our <strong>Commitment.</strong></h1>
+    <p class="hero-desc">Port Harcourt's trusted medical centre for families. Expert doctors, modern equipment and compassionate care — all under one roof.</p>
+    <div class="hero-ctas">
+      <a href="#booking" class="btn-blue">📅 Book Appointment</a>
+      <a href="#services" class="btn-outline-blue">Our Services</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><div class="trust-icon">✓</div> MDCN Registered</div>
+      <div class="trust-item"><div class="trust-icon">✓</div> 24/7 Emergency</div>
+      <div class="trust-item"><div class="trust-icon">✓</div> Lab On-site</div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-grid">
+      <div class="stat-card" style="grid-column:span 2">
+        <div class="stat-card-top">
+          <div class="stat-card-icon" style="background:rgba(30,95,172,0.1)">👨‍⚕️</div>
+          <div class="stat-card-label">Patients Treated</div>
+        </div>
+        <div class="stat-card-num">15,000+</div>
+        <div class="stat-card-sub">Since our founding in 2010</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-top">
+          <div class="stat-card-icon" style="background:rgba(13,158,126,0.1)">🏥</div>
+          <div class="stat-card-label">Specialists</div>
+        </div>
+        <div class="stat-card-num">12</div>
+        <div class="stat-card-sub">Expert doctors</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-top">
+          <div class="stat-card-icon" style="background:rgba(255,165,0,0.1)">⭐</div>
+          <div class="stat-card-label">Rating</div>
+        </div>
+        <div class="stat-card-num">4.9</div>
+        <div class="stat-card-sub">Patient satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="fade-up">
+    <div class="section-label">What We Treat</div>
+    <h2 class="section-title"><span>Our</span> Medical Services</h2>
+    <p class="section-desc">From routine checkups to specialist consultations, we provide comprehensive healthcare for you and your entire family.</p>
+  </div>
+  <div class="services-grid fade-up">
+    <div class="service-card">
+      <div class="service-icon" style="background:rgba(30,95,172,0.08)">🩺</div>
+      <h3>General Practice</h3>
+      <p>Routine checkups, illness diagnosis, prescriptions and referrals. Your first stop for any health concern.</p>
+      <a href="#booking" class="service-link">Book now</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:rgba(13,158,126,0.08)">👶</div>
+      <h3>Paediatrics</h3>
+      <p>Specialist child healthcare from newborns to teenagers. Vaccinations, growth monitoring and more.</p>
+      <a href="#booking" class="service-link">Book now</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:rgba(232,93,32,0.08)">🤰</div>
+      <h3>Antenatal Care</h3>
+      <p>Complete pregnancy care including scans, prenatal vitamins, delivery planning and postnatal support.</p>
+      <a href="#booking" class="service-link">Book now</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:rgba(30,95,172,0.08)">🔬</div>
+      <h3>Laboratory</h3>
+      <p>Full diagnostic lab on-site. Blood tests, malaria tests, typhoid, HIV, hepatitis, kidney function and more.</p>
+      <a href="#booking" class="service-link">Book now</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:rgba(13,158,126,0.08)">🦷</div>
+      <h3>Dental Care</h3>
+      <p>Tooth extraction, filling, cleaning, root canal and cosmetic dentistry by our experienced dental team.</p>
+      <a href="#booking" class="service-link">Book now</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:rgba(128,0,128,0.07)">🚨</div>
+      <h3>Emergency Care</h3>
+      <p>24-hour emergency services for accidents, sudden illness, injury and urgent medical situations.</p>
+      <a href="#booking" class="service-link">Book now</a>
+    </div>
+  </div>
+</section>
+
+<section id="doctors" class="doctors">
+  <div class="fade-up">
+    <div class="section-label">Our Team</div>
+    <h2 class="section-title"><span>Meet the</span> Doctors</h2>
+  </div>
+  <div class="doctors-grid fade-up">
+    <div class="doctor-card">
+      <div class="doctor-photo" style="background:linear-gradient(135deg,#0a2342,#1e5fac)">Dr. C</div>
+      <div class="doctor-info">
+        <div class="doctor-name">Dr. Chidi Okafor</div>
+        <div class="doctor-role">Chief Medical Officer</div>
+        <p>MBBS, FWACP. Over 18 years of experience in general medicine and surgery across Nigeria and the UK.</p>
+      </div>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-photo" style="background:linear-gradient(135deg,#0d9e7e,#0a2342)">Dr. A</div>
+      <div class="doctor-info">
+        <div class="doctor-name">Dr. Amaka Eze</div>
+        <div class="doctor-role">Paediatrician</div>
+        <p>MBBS, DCH. Specialist in child health and development. Passionate about keeping PH's children healthy.</p>
+      </div>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-photo" style="background:linear-gradient(135deg,#163560,#3b82d4)">Dr. T</div>
+      <div class="doctor-info">
+        <div class="doctor-name">Dr. Taiwo Adeyemi</div>
+        <div class="doctor-role">Obstetrics & Gynaecology</div>
+        <p>MBBS, FRCOG. Specialist in women's health, pregnancy care and safe delivery with 14 years experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="why">
+  <div class="why-content fade-up">
+    <div class="section-label">Why LifeCare</div>
+    <h2 class="section-title" style="color:#fff;font-style:italic">Why Families <span style="font-style:normal">Choose Us</span></h2>
+    <div class="why-list">
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div><h4>Experienced, Registered Doctors</h4><p>All our doctors are MDCN-registered with years of specialist experience. No quacks, ever.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div><h4>Same-Day Appointments</h4><p>Book via WhatsApp and see a doctor the same day. No long queues or waiting weeks.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div><h4>Affordable, Transparent Pricing</h4><p>We tell you the cost upfront. No hidden charges. No surprises when you get the bill.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div><h4>Modern Equipment</h4><p>Fully equipped lab, ultrasound, X-ray and ECG on-site. Fast results, accurate diagnosis.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="why-visual fade-up">
+    <div class="why-stat">
+      <div class="why-stat-icon" style="background:rgba(30,95,172,0.2)">🏅</div>
+      <div><div class="why-stat-num">14</div><div class="why-stat-label">Years in operation</div></div>
+    </div>
+    <div class="why-stat">
+      <div class="why-stat-icon" style="background:rgba(13,158,126,0.2)">👨‍👩‍👧‍👦</div>
+      <div><div class="why-stat-num">5,000+</div><div class="why-stat-label">Families served</div></div>
+    </div>
+    <div class="why-stat">
+      <div class="why-stat-icon" style="background:rgba(232,93,32,0.2)">🚨</div>
+      <div><div class="why-stat-num">24/7</div><div class="why-stat-label">Emergency available</div></div>
+    </div>
+    <div class="why-stat">
+      <div class="why-stat-icon" style="background:rgba(255,200,0,0.15)">⭐</div>
+      <div><div class="why-stat-num">4.9 / 5</div><div class="why-stat-label">Patient satisfaction score</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial fade-up">
+  <div class="section-label" style="justify-content:center">Patient Story</div>
+  <div class="testi-stars">★★★★★</div>
+  <div class="testi-quote">"LifeCare saved my son's life when he had a severe asthma attack at 2am. The emergency team was incredible — professional, fast and caring. I recommend them to every family in Port Harcourt."</div>
+  <div class="testi-cite">— Mrs. Ngozi Chukwu, GRA Phase 2</div>
+</section>
+
+<section id="booking" class="booking">
+  <div class="booking-inner fade-up">
+    <div>
+      <h2>Ready to See a Doctor?</h2>
+      <p>Book your appointment today via WhatsApp. Same-day slots available for most services. Our team will confirm your booking within minutes.</p>
+      <a href="https://wa.me/2348000000000?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20LifeCare" class="btn-white">💬 Book via WhatsApp</a>
+    </div>
+    <div class="booking-details">
+      <div class="booking-detail">
+        <div class="booking-detail-icon">📍</div>
+        <div class="booking-detail-text"><h4>Location</h4><p>8 Peter Odili Road, Port Harcourt</p></div>
+      </div>
+      <div class="booking-detail">
+        <div class="booking-detail-icon">📞</div>
+        <div class="booking-detail-text"><h4>Phone</h4><p>0800 000 0000</p></div>
+      </div>
+      <div class="booking-detail">
+        <div class="booking-detail-icon">🕐</div>
+        <div class="booking-detail-text"><h4>Hours</h4><p>Mon–Fri 7am–9pm · Sat–Sun 8am–6pm</p></div>
+      </div>
+      <div class="booking-detail">
+        <div class="booking-detail-icon">🚨</div>
+        <div class="booking-detail-text"><h4>Emergency</h4><p>24/7 Emergency Line Available</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">LifeCare Medical Centre</div>
+  <p>© 2025 LifeCare Medical Centre, Port Harcourt. All rights reserved.</p>
+  <p style="color:rgba(255,255,255,0.15);font-size:0.72rem">Website by Anji Bob-Manuel</p>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
