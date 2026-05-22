@@ -1,477 +1,1264 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Zara Lagos Boutique – Premium Fashion, Port Harcourt</title>
-<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Tenor+Sans&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#0c0c0c;
-  --bg2:#141414;
-  --bg3:#1c1c1c;
-  --rose:#c9956a;
-  --rose-light:#e8b48a;
-  --rose-pale:rgba(201,149,106,0.08);
-  --rose-border:rgba(201,149,106,0.2);
-  --cream:#f5ede4;
-  --cream2:#e8d8c8;
-  --text:#f0e8e0;
-  --muted:#8a7a6e;
-  --border:rgba(240,232,224,0.08);
-  --font-head:'EB Garamond',serif;
-  --font-sub:'Tenor Sans',sans-serif;
-  --font-body:'Didact Gothic',sans-serif;
-}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.6;overflow-x:hidden}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zara Lagos Boutique – Premium Fashion, Port Harcourt</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Tenor+Sans&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --bg: #0c0c0c;
+        --bg2: #141414;
+        --bg3: #1c1c1c;
+        --rose: #c9956a;
+        --rose-light: #e8b48a;
+        --rose-pale: rgba(201, 149, 106, 0.08);
+        --rose-border: rgba(201, 149, 106, 0.2);
+        --cream: #f5ede4;
+        --cream2: #e8d8c8;
+        --text: #f0e8e0;
+        --muted: #8a7a6e;
+        --border: rgba(240, 232, 224, 0.08);
+        --font-head: "EB Garamond", serif;
+        --font-sub: "Tenor Sans", sans-serif;
+        --font-body: "Didact Gothic", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
 
-/* ANNOUNCEMENT BAR */
-.announcement{background:var(--rose);color:var(--bg);text-align:center;padding:0.5rem;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;font-family:var(--font-sub);font-weight:400}
+      /* ANNOUNCEMENT BAR */
+      .announcement {
+        background: var(--rose);
+        color: var(--bg);
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-family: var(--font-sub);
+        font-weight: 400;
+      }
 
-/* NAV */
-nav{position:sticky;top:0;z-index:100;padding:1.25rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(12,12,12,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.nav-logo{font-family:var(--font-head);font-size:1.6rem;font-weight:400;color:var(--cream);text-decoration:none;letter-spacing:0.08em;font-style:italic}
-.nav-logo span{font-style:normal;color:var(--rose)}
-.nav-links{display:flex;gap:2.5rem;list-style:none}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;font-family:var(--font-sub);transition:color 0.2s}
-.nav-links a:hover{color:var(--cream)}
-.nav-actions{display:flex;align-items:center;gap:1.5rem}
-.nav-icon{color:var(--muted);font-size:1rem;cursor:pointer;transition:color 0.2s}
-.nav-icon:hover{color:var(--rose)}
-.nav-shop{background:var(--rose);color:var(--bg);padding:0.55rem 1.5rem;text-decoration:none;font-size:0.72rem;font-family:var(--font-sub);letter-spacing:0.15em;text-transform:uppercase;transition:background 0.2s}
-.nav-shop:hover{background:var(--rose-light)}
+      /* NAV */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 1.25rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(12, 12, 12, 0.97);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-logo {
+        font-family: var(--font-head);
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: var(--cream);
+        text-decoration: none;
+        letter-spacing: 0.08em;
+        font-style: italic;
+      }
+      .nav-logo span {
+        font-style: normal;
+        color: var(--rose);
+      }
+      .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+      }
+      .nav-links a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-family: var(--font-sub);
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--cream);
+      }
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .nav-icon {
+        color: var(--muted);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+      .nav-icon:hover {
+        color: var(--rose);
+      }
+      .nav-shop {
+        background: var(--rose);
+        color: var(--bg);
+        padding: 0.55rem 1.5rem;
+        text-decoration: none;
+        font-size: 0.72rem;
+        font-family: var(--font-sub);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        transition: background 0.2s;
+      }
+      .nav-shop:hover {
+        background: var(--rose-light);
+      }
 
-/* HERO */
-.hero{min-height:92vh;display:grid;grid-template-columns:1.1fr 0.9fr}
-.hero-left{background:var(--bg2);display:flex;flex-direction:column;justify-content:flex-end;padding:5rem 4rem;position:relative;overflow:hidden}
-.hero-bg-word{position:absolute;bottom:-0.2em;left:-0.05em;font-family:var(--font-head);font-size:22rem;font-weight:400;color:rgba(201,149,106,0.04);line-height:1;pointer-events:none;font-style:italic;white-space:nowrap}
-.hero-season{font-family:var(--font-sub);font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--rose);margin-bottom:2rem;display:flex;align-items:center;gap:1rem}
-.hero-season::before{content:'';display:block;width:40px;height:1px;background:var(--rose)}
-.hero h1{font-family:var(--font-head);font-size:clamp(3.5rem,6vw,5.5rem);font-weight:400;line-height:1;letter-spacing:-0.01em;color:var(--cream);margin-bottom:1.5rem;font-style:italic}
-.hero h1 span{font-style:normal;display:block;color:var(--rose)}
-.hero-desc{color:var(--muted);font-size:0.9rem;max-width:380px;line-height:1.9;margin-bottom:2.5rem;font-family:var(--font-body)}
-.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-rose{background:var(--rose);color:var(--bg);padding:0.9rem 2.5rem;text-decoration:none;font-family:var(--font-sub);font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;display:inline-block;transition:background 0.2s}
-.btn-rose:hover{background:var(--rose-light)}
-.btn-ghost{border:1px solid var(--border);color:var(--muted);padding:0.9rem 2.5rem;text-decoration:none;font-family:var(--font-sub);font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;display:inline-block;transition:border-color 0.2s,color 0.2s}
-.btn-ghost:hover{border-color:rgba(240,232,224,0.3);color:var(--cream)}
-.hero-right{display:grid;grid-template-rows:1fr 1fr}
-.hero-img-top{background:linear-gradient(160deg,#2a1a10,#1c1008);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
-.hero-img-bottom{background:linear-gradient(160deg,#1c1c1c,#0c0c0c);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.hero-img-label{position:absolute;bottom:1.5rem;left:1.5rem;font-family:var(--font-head);font-size:0.9rem;color:rgba(240,232,224,0.4);font-style:italic}
-.fashion-figure{font-family:var(--font-head);font-size:5rem;color:var(--rose);opacity:0.15;font-style:italic}
-.hero-tag-float{position:absolute;top:1.5rem;right:1.5rem;background:var(--bg);border:1px solid var(--rose-border);padding:0.6rem 1rem;font-family:var(--font-sub);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--rose)}
+      /* HERO */
+      .hero {
+        min-height: 92vh;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+      .hero-left {
+        background: var(--bg2);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 5rem 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-bg-word {
+        position: absolute;
+        bottom: -0.2em;
+        left: -0.05em;
+        font-family: var(--font-head);
+        font-size: 22rem;
+        font-weight: 400;
+        color: rgba(201, 149, 106, 0.04);
+        line-height: 1;
+        pointer-events: none;
+        font-style: italic;
+        white-space: nowrap;
+      }
+      .hero-season {
+        font-family: var(--font-sub);
+        font-size: 0.7rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--rose);
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .hero-season::before {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 1px;
+        background: var(--rose);
+      }
+      .hero h1 {
+        font-family: var(--font-head);
+        font-size: clamp(3.5rem, 6vw, 5.5rem);
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: -0.01em;
+        color: var(--cream);
+        margin-bottom: 1.5rem;
+        font-style: italic;
+      }
+      .hero h1 span {
+        font-style: normal;
+        display: block;
+        color: var(--rose);
+      }
+      .hero-desc {
+        color: var(--muted);
+        font-size: 0.9rem;
+        max-width: 380px;
+        line-height: 1.9;
+        margin-bottom: 2.5rem;
+        font-family: var(--font-body);
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .btn-rose {
+        background: var(--rose);
+        color: var(--bg);
+        padding: 0.9rem 2.5rem;
+        text-decoration: none;
+        font-family: var(--font-sub);
+        font-size: 0.75rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        display: inline-block;
+        transition: background 0.2s;
+      }
+      .btn-rose:hover {
+        background: var(--rose-light);
+      }
+      .btn-ghost {
+        border: 1px solid var(--border);
+        color: var(--muted);
+        padding: 0.9rem 2.5rem;
+        text-decoration: none;
+        font-family: var(--font-sub);
+        font-size: 0.75rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        display: inline-block;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .btn-ghost:hover {
+        border-color: rgba(240, 232, 224, 0.3);
+        color: var(--cream);
+      }
+      .hero-right {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+      }
+      .hero-img-top {
+        background: linear-gradient(160deg, #2a1a10, #1c1008);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid var(--border);
+      }
+      .hero-img-bottom {
+        background: linear-gradient(160deg, #1c1c1c, #0c0c0c);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-img-label {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        font-family: var(--font-head);
+        font-size: 0.9rem;
+        color: rgba(240, 232, 224, 0.4);
+        font-style: italic;
+      }
+      .fashion-figure {
+        font-family: var(--font-head);
+        font-size: 5rem;
+        color: var(--rose);
+        opacity: 0.15;
+        font-style: italic;
+      }
+      .hero-tag-float {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: var(--bg);
+        border: 1px solid var(--rose-border);
+        padding: 0.6rem 1rem;
+        font-family: var(--font-sub);
+        font-size: 0.65rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--rose);
+      }
 
-/* MARQUEE */
-.marquee-wrap{overflow:hidden;padding:1rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2)}
-.marquee-track{display:flex;animation:marquee 25s linear infinite;white-space:nowrap}
-.marquee-item{padding:0 2.5rem;font-family:var(--font-head);font-size:1rem;font-style:italic;color:var(--muted);display:flex;align-items:center;gap:2.5rem}
-.marquee-item::after{content:'◆';font-size:0.4rem;color:var(--rose);font-style:normal}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+      /* MARQUEE */
+      .marquee-wrap {
+        overflow: hidden;
+        padding: 1rem 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        background: var(--bg2);
+      }
+      .marquee-track {
+        display: flex;
+        animation: marquee 25s linear infinite;
+        white-space: nowrap;
+      }
+      .marquee-item {
+        padding: 0 2.5rem;
+        font-family: var(--font-head);
+        font-size: 1rem;
+        font-style: italic;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+      }
+      .marquee-item::after {
+        content: "◆";
+        font-size: 0.4rem;
+        color: var(--rose);
+        font-style: normal;
+      }
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
 
-/* COLLECTIONS */
-.collections{padding:7rem 4rem;background:var(--bg)}
-.section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;flex-wrap:wrap;gap:1rem}
-.section-eyebrow{font-family:var(--font-sub);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose);margin-bottom:0.75rem}
-.section-title{font-family:var(--font-head);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:400;color:var(--cream);font-style:italic;letter-spacing:-0.01em}
-.view-all{font-family:var(--font-sub);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:color 0.2s}
-.view-all:hover{color:var(--rose)}
-.view-all::after{content:'→'}
-.collections-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:420px 280px;gap:4px}
-.col-item{position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:1.5rem;cursor:pointer}
-.col-item:first-child{grid-row:span 2}
-.col-bg{position:absolute;inset:0;transition:transform 0.6s ease}
-.col-item:hover .col-bg{transform:scale(1.03)}
-.col-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,12,12,0.8) 0%,rgba(12,12,12,0) 50%)}
-.col-info{position:relative;z-index:1}
-.col-cat{font-family:var(--font-sub);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--rose);margin-bottom:0.3rem}
-.col-name{font-family:var(--font-head);font-size:1.3rem;font-weight:400;color:var(--cream);font-style:italic}
-.col-price{font-family:var(--font-sub);font-size:0.78rem;color:rgba(240,232,224,0.5);margin-top:0.2rem;letter-spacing:0.05em}
-.c1{background:linear-gradient(160deg,#2a1a10 0%,#1a0f08 40%,#0c0c0c 100%)}
-.c2{background:linear-gradient(160deg,#1c1c1c 0%,#2a2018 100%)}
-.c3{background:linear-gradient(160deg,#201810 0%,#141010 100%)}
-.c4{background:linear-gradient(160deg,#181818 0%,#1a1410 100%)}
-.c5{background:linear-gradient(160deg,#1c1410 0%,#0c0c0c 100%)}
+      /* COLLECTIONS */
+      .collections {
+        padding: 7rem 4rem;
+        background: var(--bg);
+      }
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 4rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .section-eyebrow {
+        font-family: var(--font-sub);
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--rose);
+        margin-bottom: 0.75rem;
+      }
+      .section-title {
+        font-family: var(--font-head);
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        font-weight: 400;
+        color: var(--cream);
+        font-style: italic;
+        letter-spacing: -0.01em;
+      }
+      .view-all {
+        font-family: var(--font-sub);
+        font-size: 0.72rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.2s;
+      }
+      .view-all:hover {
+        color: var(--rose);
+      }
+      .view-all::after {
+        content: "→";
+      }
+      .collections-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 420px 280px;
+        gap: 4px;
+      }
+      .col-item {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        padding: 1.5rem;
+        cursor: pointer;
+      }
+      .col-item:first-child {
+        grid-row: span 2;
+      }
+      .col-bg {
+        position: absolute;
+        inset: 0;
+        transition: transform 0.6s ease;
+      }
+      .col-item:hover .col-bg {
+        transform: scale(1.03);
+      }
+      .col-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(12, 12, 12, 0.8) 0%,
+          rgba(12, 12, 12, 0) 50%
+        );
+      }
+      .col-info {
+        position: relative;
+        z-index: 1;
+      }
+      .col-cat {
+        font-family: var(--font-sub);
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--rose);
+        margin-bottom: 0.3rem;
+      }
+      .col-name {
+        font-family: var(--font-head);
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: var(--cream);
+        font-style: italic;
+      }
+      .col-price {
+        font-family: var(--font-sub);
+        font-size: 0.78rem;
+        color: rgba(240, 232, 224, 0.5);
+        margin-top: 0.2rem;
+        letter-spacing: 0.05em;
+      }
+      .c1 {
+        background: linear-gradient(
+          160deg,
+          #2a1a10 0%,
+          #1a0f08 40%,
+          #0c0c0c 100%
+        );
+      }
+      .c2 {
+        background: linear-gradient(160deg, #1c1c1c 0%, #2a2018 100%);
+      }
+      .c3 {
+        background: linear-gradient(160deg, #201810 0%, #141010 100%);
+      }
+      .c4 {
+        background: linear-gradient(160deg, #181818 0%, #1a1410 100%);
+      }
+      .c5 {
+        background: linear-gradient(160deg, #1c1410 0%, #0c0c0c 100%);
+      }
 
-/* FEATURED PRODUCTS */
-.products{padding:7rem 4rem;background:var(--bg2)}
-.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:4rem;background:var(--border)}
-.product-card{background:var(--bg2);overflow:hidden;position:relative;cursor:pointer}
-.product-img{height:320px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;transition:background 0.4s}
-.product-card:hover .product-img{filter:brightness(0.9)}
-.product-badge{position:absolute;top:1rem;left:1rem;background:var(--rose);color:var(--bg);font-family:var(--font-sub);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.75rem}
-.product-figure{font-family:var(--font-head);font-size:3.5rem;font-style:italic;opacity:0.12}
-.product-info{padding:1.25rem 1rem}
-.product-brand{font-family:var(--font-sub);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose);margin-bottom:0.3rem}
-.product-name{font-family:var(--font-head);font-size:1rem;font-weight:400;color:var(--cream);margin-bottom:0.4rem;font-style:italic}
-.product-price{font-family:var(--font-sub);font-size:0.85rem;color:var(--muted)}
-.product-price span{color:var(--rose);margin-left:0.5rem}
+      /* FEATURED PRODUCTS */
+      .products {
+        padding: 7rem 4rem;
+        background: var(--bg2);
+      }
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2px;
+        margin-top: 4rem;
+        background: var(--border);
+      }
+      .product-card {
+        background: var(--bg2);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+      .product-img {
+        height: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        transition: background 0.4s;
+      }
+      .product-card:hover .product-img {
+        filter: brightness(0.9);
+      }
+      .product-badge {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: var(--rose);
+        color: var(--bg);
+        font-family: var(--font-sub);
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.3rem 0.75rem;
+      }
+      .product-figure {
+        font-family: var(--font-head);
+        font-size: 3.5rem;
+        font-style: italic;
+        opacity: 0.12;
+      }
+      .product-info {
+        padding: 1.25rem 1rem;
+      }
+      .product-brand {
+        font-family: var(--font-sub);
+        font-size: 0.62rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--rose);
+        margin-bottom: 0.3rem;
+      }
+      .product-name {
+        font-family: var(--font-head);
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--cream);
+        margin-bottom: 0.4rem;
+        font-style: italic;
+      }
+      .product-price {
+        font-family: var(--font-sub);
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      .product-price span {
+        color: var(--rose);
+        margin-left: 0.5rem;
+      }
 
-/* BRAND STORY */
-.story{padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;background:var(--bg)}
-.story-visual{position:relative}
-.story-img{width:100%;height:500px;background:linear-gradient(160deg,#2a1a10,#1a0f08,#0c0c0c);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
-.story-img-text{font-family:var(--font-head);font-size:5rem;font-style:italic;color:var(--rose);opacity:0.2}
-.story-img-sub{font-family:var(--font-sub);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
-.story-float{position:absolute;bottom:-2rem;right:-2rem;background:var(--rose);padding:2rem;text-align:center}
-.story-float-num{font-family:var(--font-head);font-size:2.5rem;font-weight:400;color:var(--bg);line-height:1;font-style:italic}
-.story-float-text{font-family:var(--font-sub);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(12,12,12,0.6);margin-top:4px}
-.story-content .section-eyebrow{margin-bottom:0.75rem}
-.story-content h2{font-family:var(--font-head);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:400;font-style:italic;color:var(--cream);margin-bottom:1.5rem;letter-spacing:-0.01em;line-height:1.1}
-.story-content h2 span{color:var(--rose)}
-.story-content p{color:var(--muted);font-size:0.9rem;line-height:1.9;margin-bottom:1rem}
-.story-values{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
-.story-value{padding:1.25rem;border:1px solid var(--border);background:var(--bg2)}
-.story-value h4{font-family:var(--font-head);font-size:0.95rem;font-style:italic;color:var(--cream);margin-bottom:0.3rem}
-.story-value p{font-size:0.78rem;color:var(--muted);line-height:1.6}
+      /* BRAND STORY */
+      .story {
+        padding: 7rem 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+        align-items: center;
+        background: var(--bg);
+      }
+      .story-visual {
+        position: relative;
+      }
+      .story-img {
+        width: 100%;
+        height: 500px;
+        background: linear-gradient(160deg, #2a1a10, #1a0f08, #0c0c0c);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .story-img-text {
+        font-family: var(--font-head);
+        font-size: 5rem;
+        font-style: italic;
+        color: var(--rose);
+        opacity: 0.2;
+      }
+      .story-img-sub {
+        font-family: var(--font-sub);
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .story-float {
+        position: absolute;
+        bottom: -2rem;
+        right: -2rem;
+        background: var(--rose);
+        padding: 2rem;
+        text-align: center;
+      }
+      .story-float-num {
+        font-family: var(--font-head);
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: var(--bg);
+        line-height: 1;
+        font-style: italic;
+      }
+      .story-float-text {
+        font-family: var(--font-sub);
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(12, 12, 12, 0.6);
+        margin-top: 4px;
+      }
+      .story-content .section-eyebrow {
+        margin-bottom: 0.75rem;
+      }
+      .story-content h2 {
+        font-family: var(--font-head);
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        font-weight: 400;
+        font-style: italic;
+        color: var(--cream);
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.01em;
+        line-height: 1.1;
+      }
+      .story-content h2 span {
+        color: var(--rose);
+      }
+      .story-content p {
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.9;
+        margin-bottom: 1rem;
+      }
+      .story-values {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .story-value {
+        padding: 1.25rem;
+        border: 1px solid var(--border);
+        background: var(--bg2);
+      }
+      .story-value h4 {
+        font-family: var(--font-head);
+        font-size: 0.95rem;
+        font-style: italic;
+        color: var(--cream);
+        margin-bottom: 0.3rem;
+      }
+      .story-value p {
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
 
-/* TESTIMONIALS */
-.testimonials{padding:7rem 4rem;background:var(--bg2)}
-.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:4rem}
-.testi-card{background:var(--bg2);padding:2.5rem}
-.testi-stars{color:var(--rose);letter-spacing:3px;font-size:0.8rem;margin-bottom:1.25rem}
-.testi-card p{font-family:var(--font-head);font-size:1rem;font-style:italic;color:var(--muted);line-height:1.8;margin-bottom:1.5rem}
-.testi-author h4{font-family:var(--font-sub);font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);margin-bottom:2px}
-.testi-author p{font-size:0.75rem;color:var(--muted)}
+      /* TESTIMONIALS */
+      .testimonials {
+        padding: 7rem 4rem;
+        background: var(--bg2);
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+        margin-top: 4rem;
+      }
+      .testi-card {
+        background: var(--bg2);
+        padding: 2.5rem;
+      }
+      .testi-stars {
+        color: var(--rose);
+        letter-spacing: 3px;
+        font-size: 0.8rem;
+        margin-bottom: 1.25rem;
+      }
+      .testi-card p {
+        font-family: var(--font-head);
+        font-size: 1rem;
+        font-style: italic;
+        color: var(--muted);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+      .testi-author h4 {
+        font-family: var(--font-sub);
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--cream);
+        margin-bottom: 2px;
+      }
+      .testi-author p {
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
 
-/* CTA BANNER */
-.cta-banner{padding:8rem 4rem;background:var(--bg3);text-align:center;position:relative;overflow:hidden}
-.cta-banner::before{content:'FASHION';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--font-head);font-size:18rem;font-style:italic;color:rgba(201,149,106,0.03);white-space:nowrap;pointer-events:none}
-.cta-banner h2{font-family:var(--font-head);font-size:clamp(2.5rem,6vw,5rem);font-weight:400;font-style:italic;color:var(--cream);margin-bottom:0.5rem;letter-spacing:-0.02em;position:relative}
-.cta-banner h2 span{color:var(--rose)}
-.cta-banner p{color:var(--muted);font-size:0.9rem;margin-bottom:2.5rem;max-width:400px;margin-left:auto;margin-right:auto;position:relative}
-.cta-contact{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;position:relative}
-.cta-contact-item{display:flex;align-items:center;gap:0.6rem;color:var(--muted);font-size:0.83rem;font-family:var(--font-sub);letter-spacing:0.05em;text-decoration:none;transition:color 0.2s}
-.cta-contact-item:hover{color:var(--rose)}
+      /* CTA BANNER */
+      .cta-banner {
+        padding: 8rem 4rem;
+        background: var(--bg3);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-banner::before {
+        content: "FASHION";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--font-head);
+        font-size: 18rem;
+        font-style: italic;
+        color: rgba(201, 149, 106, 0.03);
+        white-space: nowrap;
+        pointer-events: none;
+      }
+      .cta-banner h2 {
+        font-family: var(--font-head);
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-weight: 400;
+        font-style: italic;
+        color: var(--cream);
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.02em;
+        position: relative;
+      }
+      .cta-banner h2 span {
+        color: var(--rose);
+      }
+      .cta-banner p {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 2.5rem;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+      }
+      .cta-contact {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2.5rem;
+        position: relative;
+      }
+      .cta-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: var(--muted);
+        font-size: 0.83rem;
+        font-family: var(--font-sub);
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .cta-contact-item:hover {
+        color: var(--rose);
+      }
 
-/* FOOTER */
-footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 4rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;align-items:start}
-.footer-brand{font-family:var(--font-head);font-size:1.5rem;font-style:italic;color:var(--cream);margin-bottom:0.75rem}
-.footer-brand span{color:var(--rose)}
-footer p{color:var(--muted);font-size:0.8rem;line-height:1.7}
-.footer-col h4{font-family:var(--font-sub);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--rose);margin-bottom:1rem}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
-.footer-col ul a{color:var(--muted);text-decoration:none;font-size:0.83rem;transition:color 0.2s;font-family:var(--font-sub);letter-spacing:0.05em}
-.footer-col ul a:hover{color:var(--cream)}
-.footer-bottom{border-top:1px solid var(--border);padding:1.25rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
-.footer-bottom p{color:rgba(240,232,224,0.2);font-size:0.75rem;font-family:var(--font-sub);letter-spacing:0.05em}
+      /* FOOTER */
+      footer {
+        background: var(--bg);
+        border-top: 1px solid var(--border);
+        padding: 3rem 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
+      .footer-brand {
+        font-family: var(--font-head);
+        font-size: 1.5rem;
+        font-style: italic;
+        color: var(--cream);
+        margin-bottom: 0.75rem;
+      }
+      .footer-brand span {
+        color: var(--rose);
+      }
+      footer p {
+        color: var(--muted);
+        font-size: 0.8rem;
+        line-height: 1.7;
+      }
+      .footer-col h4 {
+        font-family: var(--font-sub);
+        font-size: 0.7rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--rose);
+        margin-bottom: 1rem;
+      }
+      .footer-col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .footer-col ul a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.83rem;
+        transition: color 0.2s;
+        font-family: var(--font-sub);
+        letter-spacing: 0.05em;
+      }
+      .footer-col ul a:hover {
+        color: var(--cream);
+      }
+      .footer-bottom {
+        border-top: 1px solid var(--border);
+        padding: 1.25rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .footer-bottom p {
+        color: rgba(240, 232, 224, 0.2);
+        font-size: 0.75rem;
+        font-family: var(--font-sub);
+        letter-spacing: 0.05em;
+      }
 
-/* FADE */
-.fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
-.fade-up.visible{opacity:1;transform:translateY(0)}
+      /* FADE */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-/* MOBILE */
-@media(max-width:900px){
-  .announcement{display:none}
-  nav{padding:1rem 1.5rem}
-  .nav-links{display:none}
-  .hero{grid-template-columns:1fr}
-  .hero-right{display:none}
-  .hero-left{padding:4rem 1.5rem}
-  .collections,.products,.story,.testimonials,.cta-banner{padding:4rem 1.5rem}
-  .collections-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-  .col-item:first-child{grid-row:span 1;grid-column:span 2}
-  .products-grid{grid-template-columns:1fr 1fr}
-  .story{grid-template-columns:1fr;gap:3rem}
-  .story-float{right:0;bottom:-1rem}
-  .testimonials-grid{grid-template-columns:1fr}
-  footer{grid-template-columns:1fr;gap:2rem;padding:3rem 1.5rem}
-  .footer-bottom{padding:1rem 1.5rem;flex-direction:column;text-align:center}
-}
-</style>
-</head>
-<body>
-
-<div class="announcement">New Collection Now Available — Shop The Summer Edit</div>
-
-<nav>
-  <a class="nav-logo" href="#"><span>Zara</span> Lagos</a>
-  <ul class="nav-links">
-    <li><a href="#collections">Collections</a></li>
-    <li><a href="#products">Shop</a></li>
-    <li><a href="#story">Our Story</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="nav-actions">
-    <span class="nav-icon">🔍</span>
-    <span class="nav-icon">🛍️</span>
-    <a href="#contact" class="nav-shop">Shop Now</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-bg-word">Fashion</div>
-    <div class="hero-season">Summer Collection 2025</div>
-    <h1>Dress with<br><span>Intention.</span></h1>
-    <p class="hero-desc">Curated fashion for the modern Nigerian woman. Premium fabrics, timeless silhouettes and styles made to be remembered — available right here in Port Harcourt.</p>
-    <div class="hero-ctas">
-      <a href="#collections" class="btn-rose">Shop Collection</a>
-      <a href="#story" class="btn-ghost">Our Story</a>
+      /* MOBILE */
+      @media (max-width: 900px) {
+        .announcement {
+          display: none;
+        }
+        nav {
+          padding: 1rem 1.5rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .hero-right {
+          display: none;
+        }
+        .hero-left {
+          padding: 4rem 1.5rem;
+        }
+        .collections,
+        .products,
+        .story,
+        .testimonials,
+        .cta-banner {
+          padding: 4rem 1.5rem;
+        }
+        .collections-grid {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+        }
+        .col-item:first-child {
+          grid-row: span 1;
+          grid-column: span 2;
+        }
+        .products-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .story {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+        .story-float {
+          right: 0;
+          bottom: -1rem;
+        }
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+        footer {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          padding: 3rem 1.5rem;
+        }
+        .footer-bottom {
+          padding: 1rem 1.5rem;
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="announcement">
+      New Collection Now Available — Shop The Summer Edit
     </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-img-top">
-      <div class="hero-tag-float">New In</div>
-      <div class="fashion-figure">Z</div>
-      <div class="hero-img-label">Summer Edit</div>
-    </div>
-    <div class="hero-img-bottom">
-      <div class="fashion-figure">L</div>
-      <div class="hero-img-label">Lookbook 2025</div>
-    </div>
-  </div>
-</section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <span class="marquee-item">New Arrivals</span>
-    <span class="marquee-item">Premium Fabrics</span>
-    <span class="marquee-item">Made to Order</span>
-    <span class="marquee-item">Free Delivery PH</span>
-    <span class="marquee-item">Agbada & Aso-Oke</span>
-    <span class="marquee-item">Wedding Styles</span>
-    <span class="marquee-item">Ready to Wear</span>
-    <span class="marquee-item">New Arrivals</span>
-    <span class="marquee-item">Premium Fabrics</span>
-    <span class="marquee-item">Made to Order</span>
-    <span class="marquee-item">Free Delivery PH</span>
-    <span class="marquee-item">Agbada & Aso-Oke</span>
-    <span class="marquee-item">Wedding Styles</span>
-    <span class="marquee-item">Ready to Wear</span>
-  </div>
-</div>
+    <nav>
+      <a class="nav-logo" href="#"><span>Zara</span> Lagos</a>
+      <ul class="nav-links">
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <span class="nav-icon">🔍</span>
+        <span class="nav-icon">🛍️</span>
+        <a href="#contact" class="nav-shop">Shop Now</a>
+      </div>
+    </nav>
 
-<!-- COLLECTIONS -->
-<section id="collections" class="collections">
-  <div class="section-header fade-up">
-    <div>
-      <div class="section-eyebrow">Shop By Category</div>
-      <div class="section-title">Our Collections</div>
-    </div>
-    <a href="#products" class="view-all">View All</a>
-  </div>
-  <div class="collections-grid fade-up">
-    <div class="col-item">
-      <div class="col-bg c1"></div>
-      <div class="col-overlay"></div>
-      <div class="col-info">
-        <div class="col-cat">Featured</div>
-        <div class="col-name">Bridal & Wedding</div>
-        <div class="col-price">From ₦85,000</div>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-bg-word">Fashion</div>
+        <div class="hero-season">Summer Collection 2025</div>
+        <h1>Dress with<br /><span>Intention.</span></h1>
+        <p class="hero-desc">
+          Curated fashion for the modern Nigerian woman. Premium fabrics,
+          timeless silhouettes and styles made to be remembered — available
+          right here in Port Harcourt.
+        </p>
+        <div class="hero-ctas">
+          <a href="#collections" class="btn-rose">Shop Collection</a>
+          <a href="#story" class="btn-ghost">Our Story</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-img-top">
+          <div class="hero-tag-float">New In</div>
+          <div class="fashion-figure">Z</div>
+          <div class="hero-img-label">Summer Edit</div>
+        </div>
+        <div class="hero-img-bottom">
+          <div class="fashion-figure">L</div>
+          <div class="hero-img-label">Lookbook 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span class="marquee-item">New Arrivals</span>
+        <span class="marquee-item">Premium Fabrics</span>
+        <span class="marquee-item">Made to Order</span>
+        <span class="marquee-item">Free Delivery PH</span>
+        <span class="marquee-item">Agbada & Aso-Oke</span>
+        <span class="marquee-item">Wedding Styles</span>
+        <span class="marquee-item">Ready to Wear</span>
+        <span class="marquee-item">New Arrivals</span>
+        <span class="marquee-item">Premium Fabrics</span>
+        <span class="marquee-item">Made to Order</span>
+        <span class="marquee-item">Free Delivery PH</span>
+        <span class="marquee-item">Agbada & Aso-Oke</span>
+        <span class="marquee-item">Wedding Styles</span>
+        <span class="marquee-item">Ready to Wear</span>
       </div>
     </div>
-    <div class="col-item">
-      <div class="col-bg c2"></div>
-      <div class="col-overlay"></div>
-      <div class="col-info">
-        <div class="col-cat">Women</div>
-        <div class="col-name">Ready to Wear</div>
-        <div class="col-price">From ₦18,000</div>
-      </div>
-    </div>
-    <div class="col-item">
-      <div class="col-bg c3"></div>
-      <div class="col-overlay"></div>
-      <div class="col-info">
-        <div class="col-cat">Traditional</div>
-        <div class="col-name">Aso-Oke & Ankara</div>
-        <div class="col-price">From ₦25,000</div>
-      </div>
-    </div>
-    <div class="col-item">
-      <div class="col-bg c4"></div>
-      <div class="col-overlay"></div>
-      <div class="col-info">
-        <div class="col-cat">Men</div>
-        <div class="col-name">Agbada & Suits</div>
-        <div class="col-price">From ₦35,000</div>
-      </div>
-    </div>
-    <div class="col-item">
-      <div class="col-bg c5"></div>
-      <div class="col-overlay"></div>
-      <div class="col-info">
-        <div class="col-cat">Accessories</div>
-        <div class="col-name">Bags & Jewellery</div>
-        <div class="col-price">From ₦8,000</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- PRODUCTS -->
-<section id="products" class="products">
-  <div class="section-header fade-up">
-    <div>
-      <div class="section-eyebrow">Just Dropped</div>
-      <div class="section-title">New Arrivals</div>
-    </div>
-    <a href="#contact" class="view-all">Shop All</a>
-  </div>
-  <div class="products-grid fade-up">
-    <div class="product-card">
-      <div class="product-img" style="background:linear-gradient(160deg,#2a1a10,#1a0a08)">
-        <div class="product-badge">New In</div>
-        <div class="product-figure" style="color:var(--rose)">A</div>
+    <!-- COLLECTIONS -->
+    <section id="collections" class="collections">
+      <div class="section-header fade-up">
+        <div>
+          <div class="section-eyebrow">Shop By Category</div>
+          <div class="section-title">Our Collections</div>
+        </div>
+        <a href="#products" class="view-all">View All</a>
       </div>
-      <div class="product-info">
-        <div class="product-brand">Women · Ankara</div>
-        <div class="product-name">The Lagos Wrap Dress</div>
-        <div class="product-price">₦28,000 <span>In Stock</span></div>
+      <div class="collections-grid fade-up">
+        <div class="col-item">
+          <div class="col-bg c1"></div>
+          <div class="col-overlay"></div>
+          <div class="col-info">
+            <div class="col-cat">Featured</div>
+            <div class="col-name">Bridal & Wedding</div>
+            <div class="col-price">From ₦85,000</div>
+          </div>
+        </div>
+        <div class="col-item">
+          <div class="col-bg c2"></div>
+          <div class="col-overlay"></div>
+          <div class="col-info">
+            <div class="col-cat">Women</div>
+            <div class="col-name">Ready to Wear</div>
+            <div class="col-price">From ₦18,000</div>
+          </div>
+        </div>
+        <div class="col-item">
+          <div class="col-bg c3"></div>
+          <div class="col-overlay"></div>
+          <div class="col-info">
+            <div class="col-cat">Traditional</div>
+            <div class="col-name">Aso-Oke & Ankara</div>
+            <div class="col-price">From ₦25,000</div>
+          </div>
+        </div>
+        <div class="col-item">
+          <div class="col-bg c4"></div>
+          <div class="col-overlay"></div>
+          <div class="col-info">
+            <div class="col-cat">Men</div>
+            <div class="col-name">Agbada & Suits</div>
+            <div class="col-price">From ₦35,000</div>
+          </div>
+        </div>
+        <div class="col-item">
+          <div class="col-bg c5"></div>
+          <div class="col-overlay"></div>
+          <div class="col-info">
+            <div class="col-cat">Accessories</div>
+            <div class="col-name">Bags & Jewellery</div>
+            <div class="col-price">From ₦8,000</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="product-card">
-      <div class="product-img" style="background:linear-gradient(160deg,#1a1a20,#0c0c14)">
-        <div class="product-badge" style="background:var(--bg3);color:var(--rose)">Popular</div>
-        <div class="product-figure" style="color:#9090d0">B</div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Men · Traditional</div>
-        <div class="product-name">Royal Agbada Set</div>
-        <div class="product-price">₦65,000 <span>Made to Order</span></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="product-img" style="background:linear-gradient(160deg,#201a0a,#100e04)">
-        <div class="product-badge">Sale</div>
-        <div class="product-figure" style="color:#c9b06a">C</div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Women · Lace</div>
-        <div class="product-name">Ivory Lace Blouse</div>
-        <div class="product-price">₦22,000 <span style="text-decoration:line-through;color:var(--muted)">₦30,000</span></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="product-img" style="background:linear-gradient(160deg,#1a0a14,#0c0810)">
-        <div class="product-figure" style="color:#c06090">D</div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Women · Bridal</div>
-        <div class="product-name">Blush Bridal Gown</div>
-        <div class="product-price">₦120,000 <span>Bespoke</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- STORY -->
-<section id="story" class="story">
-  <div class="story-visual fade-up">
-    <div class="story-img">
-      <div class="story-img-text">ZL</div>
-      <div class="story-img-sub">Est. 2018 · Port Harcourt</div>
-    </div>
-    <div class="story-float">
-      <div class="story-float-num">7+</div>
-      <div class="story-float-text">Years in Fashion</div>
-    </div>
-  </div>
-  <div class="story-content fade-up">
-    <div class="section-eyebrow">Our Story</div>
-    <h2>Style Born in<br><span>Lagos, Living</span><br>in Port Harcourt.</h2>
-    <p>Zara Lagos Boutique was founded in 2018 by Zara Adeyemi, a Lagos-trained fashion designer who moved to Port Harcourt and couldn't find a boutique that matched her taste. So she built one.</p>
-    <p>We stock only premium, curated pieces — from contemporary ready-to-wear to full traditional Aso-Oke and bespoke bridal. Every item is personally selected or made in our studio.</p>
-    <div class="story-values">
-      <div class="story-value">
-        <h4>Quality First</h4>
-        <p>We never compromise on fabric, finish or fit. Only premium makes the cut.</p>
+    <!-- PRODUCTS -->
+    <section id="products" class="products">
+      <div class="section-header fade-up">
+        <div>
+          <div class="section-eyebrow">Just Dropped</div>
+          <div class="section-title">New Arrivals</div>
+        </div>
+        <a href="#contact" class="view-all">Shop All</a>
       </div>
-      <div class="story-value">
-        <h4>Made for You</h4>
-        <p>Bespoke and made-to-measure options for every occasion and size.</p>
+      <div class="products-grid fade-up">
+        <div class="product-card">
+          <div
+            class="product-img"
+            style="background: linear-gradient(160deg, #2a1a10, #1a0a08)"
+          >
+            <div class="product-badge">New In</div>
+            <div class="product-figure" style="color: var(--rose)">A</div>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Women · Ankara</div>
+            <div class="product-name">The Lagos Wrap Dress</div>
+            <div class="product-price">₦28,000 <span>In Stock</span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div
+            class="product-img"
+            style="background: linear-gradient(160deg, #1a1a20, #0c0c14)"
+          >
+            <div
+              class="product-badge"
+              style="background: var(--bg3); color: var(--rose)"
+            >
+              Popular
+            </div>
+            <div class="product-figure" style="color: #9090d0">B</div>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Men · Traditional</div>
+            <div class="product-name">Royal Agbada Set</div>
+            <div class="product-price">₦65,000 <span>Made to Order</span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div
+            class="product-img"
+            style="background: linear-gradient(160deg, #201a0a, #100e04)"
+          >
+            <div class="product-badge">Sale</div>
+            <div class="product-figure" style="color: #c9b06a">C</div>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Women · Lace</div>
+            <div class="product-name">Ivory Lace Blouse</div>
+            <div class="product-price">
+              ₦22,000
+              <span style="text-decoration: line-through; color: var(--muted)"
+                >₦30,000</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div
+            class="product-img"
+            style="background: linear-gradient(160deg, #1a0a14, #0c0810)"
+          >
+            <div class="product-figure" style="color: #c06090">D</div>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Women · Bridal</div>
+            <div class="product-name">Blush Bridal Gown</div>
+            <div class="product-price">₦120,000 <span>Bespoke</span></div>
+          </div>
+        </div>
       </div>
-      <div class="story-value">
-        <h4>Fast Delivery</h4>
-        <p>Same-day delivery within Port Harcourt on ready-to-wear orders.</p>
+    </section>
+
+    <!-- STORY -->
+    <section id="story" class="story">
+      <div class="story-visual fade-up">
+        <div class="story-img">
+          <div class="story-img-text">ZL</div>
+          <div class="story-img-sub">Est. 2018 · Port Harcourt</div>
+        </div>
+        <div class="story-float">
+          <div class="story-float-num">7+</div>
+          <div class="story-float-text">Years in Fashion</div>
+        </div>
       </div>
-      <div class="story-value">
-        <h4>Easy Returns</h4>
-        <p>Not happy? We'll fix it or exchange it. No stress, no drama.</p>
+      <div class="story-content fade-up">
+        <div class="section-eyebrow">Our Story</div>
+        <h2>
+          Style Born in<br /><span>Lagos, Living</span><br />in Port Harcourt.
+        </h2>
+        <p>
+          Zara Lagos Boutique was founded in 2018 by Zara Adeyemi, a
+          Lagos-trained fashion designer who moved to Port Harcourt and couldn't
+          find a boutique that matched her taste. So she built one.
+        </p>
+        <p>
+          We stock only premium, curated pieces — from contemporary
+          ready-to-wear to full traditional Aso-Oke and bespoke bridal. Every
+          item is personally selected or made in our studio.
+        </p>
+        <div class="story-values">
+          <div class="story-value">
+            <h4>Quality First</h4>
+            <p>
+              We never compromise on fabric, finish or fit. Only premium makes
+              the cut.
+            </p>
+          </div>
+          <div class="story-value">
+            <h4>Made for You</h4>
+            <p>
+              Bespoke and made-to-measure options for every occasion and size.
+            </p>
+          </div>
+          <div class="story-value">
+            <h4>Fast Delivery</h4>
+            <p>
+              Same-day delivery within Port Harcourt on ready-to-wear orders.
+            </p>
+          </div>
+          <div class="story-value">
+            <h4>Easy Returns</h4>
+            <p>Not happy? We'll fix it or exchange it. No stress, no drama.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="section-header fade-up">
-    <div>
-      <div class="section-eyebrow">Customer Love</div>
-      <div class="section-title">What They're Saying</div>
-    </div>
-  </div>
-  <div class="testimonials-grid fade-up">
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p>"My wedding aso-oke was absolutely breathtaking. The quality was beyond what I expected and the whole process was so smooth. Zara Lagos is in a class of their own."</p>
-      <div class="testi-author"><h4>Chiamaka Obi</h4><p>Bride · Port Harcourt</p></div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p>"I ordered a custom agbada for my son's graduation and it arrived perfectly finished, exactly on time. The tailoring was immaculate. Highly recommend to any man who wants to look sharp."</p>
-      <div class="testi-author"><h4>Chief Emeka Nwosu</h4><p>GRA Phase 3, Port Harcourt</p></div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p>"Finally a boutique in PH with real taste! I've bought 6 pieces this year alone. The Ankara wrap dress I got is my most complimented outfit. Everything fits perfectly."</p>
-      <div class="testi-author"><h4>Titi Alakija</h4><p>Rumuola, Port Harcourt</p></div>
-    </div>
-  </div>
-</section>
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="section-header fade-up">
+        <div>
+          <div class="section-eyebrow">Customer Love</div>
+          <div class="section-title">What They're Saying</div>
+        </div>
+      </div>
+      <div class="testimonials-grid fade-up">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>
+            "My wedding aso-oke was absolutely breathtaking. The quality was
+            beyond what I expected and the whole process was so smooth. Zara
+            Lagos is in a class of their own."
+          </p>
+          <div class="testi-author">
+            <h4>Chiamaka Obi</h4>
+            <p>Bride · Port Harcourt</p>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>
+            "I ordered a custom agbada for my son's graduation and it arrived
+            perfectly finished, exactly on time. The tailoring was immaculate.
+            Highly recommend to any man who wants to look sharp."
+          </p>
+          <div class="testi-author">
+            <h4>Chief Emeka Nwosu</h4>
+            <p>GRA Phase 3, Port Harcourt</p>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>
+            "Finally a boutique in PH with real taste! I've bought 6 pieces this
+            year alone. The Ankara wrap dress I got is my most complimented
+            outfit. Everything fits perfectly."
+          </p>
+          <div class="testi-author">
+            <h4>Titi Alakija</h4>
+            <p>Rumuola, Port Harcourt</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- CTA BANNER -->
-<section id="contact" class="cta-banner">
-  <h2 class="fade-up">Ready to <span>Dress Well?</span></h2>
-  <p class="fade-up">Browse our collection, place a custom order or book a fitting session. We're just a WhatsApp away.</p>
-  <a href="https://wa.me/2348000000000?text=Hi%2C%20I%27d%20like%20to%20shop%20at%20Zara%20Lagos%20Boutique" class="btn-rose fade-up" style="font-size:0.85rem;padding:1.1rem 3rem;letter-spacing:0.2em">💬 Shop via WhatsApp</a>
-  <div class="cta-contact fade-up">
-    <a href="#" class="cta-contact-item">📍 22 Aba Road, Port Harcourt</a>
-    <a href="#" class="cta-contact-item">📞 0800 000 0000</a>
-    <a href="#" class="cta-contact-item">🕐 Mon–Sat · 9am–8pm</a>
-  </div>
-</section>
+    <!-- CTA BANNER -->
+    <section id="contact" class="cta-banner">
+      <h2 class="fade-up">Ready to <span>Dress Well?</span></h2>
+      <p class="fade-up">
+        Browse our collection, place a custom order or book a fitting session.
+        We're just a WhatsApp away.
+      </p>
+      <a
+        href="https://wa.me/2349028082643?text=Hi%2C%20I%27d%20like%20to%20shop%20at%20Zara%20Lagos%20Boutique"
+        class="btn-rose fade-up"
+        style="font-size: 0.85rem; padding: 1.1rem 3rem; letter-spacing: 0.2em"
+        >💬 Shop via WhatsApp</a
+      >
+      <div class="cta-contact fade-up">
+        <a href="#" class="cta-contact-item">📍 22 Aba Road, Port Harcourt</a>
+        <a href="#" class="cta-contact-item">📞 09028082643</a>
+        <a href="#" class="cta-contact-item">🕐 Mon–Sat · 9am–8pm</a>
+      </div>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-  <div>
-    <div class="footer-brand"><span>Zara</span> Lagos</div>
-    <p>Premium fashion boutique based in Port Harcourt. Ready-to-wear, traditional, bridal and bespoke styling.</p>
-  </div>
-  <div class="footer-col">
-    <h4>Shop</h4>
-    <ul>
-      <li><a href="#">New Arrivals</a></li>
-      <li><a href="#">Women's Wear</a></li>
-      <li><a href="#">Men's Wear</a></li>
-      <li><a href="#">Bridal Collection</a></li>
-      <li><a href="#">Accessories</a></li>
-    </ul>
-  </div>
-  <div class="footer-col">
-    <h4>Info</h4>
-    <ul>
-      <li><a href="#">Our Story</a></li>
-      <li><a href="#">Sizing Guide</a></li>
-      <li><a href="#">Custom Orders</a></li>
-      <li><a href="#">Delivery & Returns</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-  </div>
-</footer>
-<div class="footer-bottom">
-  <p>© 2025 Zara Lagos Boutique, Port Harcourt. All rights reserved.</p>
-  <p>Website by Anji Bob-Manuel</p>
-</div>
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <div class="footer-brand"><span>Zara</span> Lagos</div>
+        <p>
+          Premium fashion boutique based in Port Harcourt. Ready-to-wear,
+          traditional, bridal and bespoke styling.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Women's Wear</a></li>
+          <li><a href="#">Men's Wear</a></li>
+          <li><a href="#">Bridal Collection</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Sizing Guide</a></li>
+          <li><a href="#">Custom Orders</a></li>
+          <li><a href="#">Delivery & Returns</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <p>© 2025 Zara Lagos Boutique, Port Harcourt. All rights reserved.</p>
+      <p>Website by Anji Bob-Manuel</p>
+    </div>
 
-<script>
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1});
-document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
-</script>
-</body>
+    <script>
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".fade-up").forEach((el) => obs.observe(el));
+    </script>
+  </body>
 </html>
